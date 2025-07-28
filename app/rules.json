@@ -1,0 +1,10 @@
+[
+  "'",
+  "--",
+  "select",
+  "union",
+  "drop",
+  "insert",
+  "update",
+  "delete"
+]

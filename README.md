@@ -35,4 +35,4 @@ After that, you can try again to open http://localhost:8000 and get redirected.
 
 - web service is a simple backend running on port 8080.
 
-- Logs are saved to /data/logs.json.
+- Logs are saved to /waf/logs.json.

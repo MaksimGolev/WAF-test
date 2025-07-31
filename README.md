@@ -21,7 +21,7 @@ You will be automatically redirected to http://localhost:8080 (the web service).
 - If you try to send a request that matches one of the patterns defined in /data/rules.json, your IP will be blocked by the WAF and you'll receive a 403 Forbidden response.
 
 ## Unblock yourself
-To remove your IP from the blocklist, connect to Redis and delete the blocked_ips key:
+To remove your IP from the block list, connect to Redis and delete the blocked_ips key:
 ```
 docker compose exec redis redis-cli
 DEL blocked_ips

@@ -5,17 +5,17 @@ import os
 
 app = Flask(__name__)
 
-# Загрузка правил
+# Loading the rules
 rules_path = os.getenv("RULES_FILE", "/data/rules.json")
 with open(rules_path) as f:
     rules = json.load(f)
 
-# Подключение к Redis
+# Connection to Redis
 r = redis.Redis(host="redis", port=6379, decode_responses=True)
 
 logs = []
 
-# Проверка
+# Verification
 @app.before_request
 def waf_filter():
     ip = request.remote_addr
@@ -55,7 +55,7 @@ def save_logs():
 
 @app.route("/")
 def index():
-    # Проксирование запроса на web
+    # Questioning a request for Web
     return redirect("http://localhost:8080/", code=302)
 
 if __name__ == "__main__":
